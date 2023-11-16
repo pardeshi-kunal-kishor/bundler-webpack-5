@@ -11,8 +11,25 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(jpg)$/,
         type: "asset/resource",
+      },
+      {
+        test: /\.(png)$/,
+        type: "asset/inline",
+      },
+      /* {
+        test: /\.(png|jpg)$/,
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 3 * 1024, // <3kb = inline, >3kb = resource 
+          },
+        },
+      }, */
+      {
+        test: /\.txt/,
+        type: "asset/source",
       },
     ],
   },

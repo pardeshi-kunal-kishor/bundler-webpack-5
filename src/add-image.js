@@ -1,12 +1,22 @@
-import Kiwi from "./kiwi.jpg";
+import KiwiJpg from "./kiwi.jpg";
+import KiwiPng from "./kiwi.png";
+import altText from "./altText.txt";
 
 function addImage() {
-  const img = document.createElement("img");
-  img.alt = "Kiwi";
-  img.width = 300;
-  img.src = Kiwi;
   const body = document.querySelector("body");
-  body.appendChild(img);
+
+  const jpgImg = document.createElement("img");
+  jpgImg.alt = altText;
+  jpgImg.width = 300;
+  jpgImg.src = KiwiJpg;
+
+  body.appendChild(jpgImg);
+
+  const pngImg = document.createElement("img");
+  pngImg.alt = altText;
+  pngImg.width = 300;
+  pngImg.src = KiwiPng;
+  body.appendChild(pngImg);
 }
 
 export default addImage;
