@@ -67,6 +67,11 @@ module.exports = {
         path.join(process.cwd(), "build/**/*"), // to clean additional folders apart from dist.
       ],
     }),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: "Hello world",
+      meta: {
+        description: "Some description",
+      },
+    }),
   ],
 };
